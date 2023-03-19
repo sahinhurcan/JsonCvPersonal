@@ -15,8 +15,8 @@
 
     <!--SEO META-->
     <meta name="author" content="<?php echo $name ?>">
-    <meta name="description" content="<?php echo $name ?> - Kişisel Web Sitesi <?php echo $about ?>">
-    <meta name="keywords" content="<?php echo $name ?>,developer, geliştirici">
+    <meta name="description" content="<?php echo $name ?> - Personal Website, <?php echo $about ?>">
+    <meta name="keywords" content="<?php echo $name ?>,developer">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="/images/favicon.png">
   </head>

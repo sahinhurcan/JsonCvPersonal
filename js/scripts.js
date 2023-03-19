@@ -85,7 +85,15 @@ window.onload = function() {
     
                     html += `<div class="name">"${key}"</div>\n`;
                 }
-                html += `<div class="value">"${value}"</div>\n`;
+                if (value.startsWith("http")) {
+                    html += `<div class="value"><a href="${value}" target="_blank">${value}</a></div>\n`;
+                } else {
+                    if (value.includes("@")) {
+                        html += `<div class="value"><a href="mailto:${value}" target="_blank">${value}</a></div>\n`;
+                    } else {
+                    html += `<div class="value">"${value}"</div>\n`;
+                    }
+                }
                 html += `</div>\n`;
             }
     

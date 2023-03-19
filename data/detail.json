@@ -20,6 +20,38 @@
         "linkedin":"https://linkedin.com/in/sahinhurcan",
         "web_site":"https://sahinhurcan.com.tr"
     },
+    "experience":[
+        {
+            "company":"Hepiyi Sigorta",
+            "department":"Senior Software Engineer",
+            "technologies":".NET 6,CQRS,Redis,Microservices,RabbitMQ,CleanArchitechture,MongoDB,Dapper",
+            "date":"10.2022 - Current"
+        },
+        {
+            "company":"MAZAKA YAZILIM",
+            "department":"Back-End Team Lead",
+            "technologies":".NET 6,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
+            "date":"09.2021 - 10.2022"
+        },
+        {
+            "company":"MAZAKA YAZILIM",
+            "department":"Back-End Developer",
+            "technologies":".NET 5,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
+            "date":"09.2020 - 09.2021"
+        },
+        {
+            "company":"SA YAZILIM",
+            "department":"Software Developer",
+            "technologies":".NET Framework, JavaScript, JQuery, Windows Forms, T-SQL",
+            "date":"06.2020 - 09.2020"
+        },
+        {
+            "company":"MAYDANOSS MEDYA",
+            "department":"Web Developer",
+            "technologies":"PHP, HTML, CSS, MySQL",
+            "date":"2019 - 06.2020"
+        }
+    ],
     "education":[
         {
             "school":"Firat University - Faculty of Technology",
@@ -74,37 +106,5 @@
             "Slack",
             "Trello"
         ]
-    },
-    "experience":[
-        {
-            "company":"Hepiyi Sigorta",
-            "department":"Senior Software Engineer",
-            "technologies":".NET 6,CQRS,Redis,Microservices,RabbitMQ,CleanArchitechture,MongoDB,Dapper",
-            "date":"10.2022 - Current"
-        },
-        {
-            "company":"MAZAKA YAZILIM",
-            "department":"Back-End Team Lead",
-            "technologies":".NET 6,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
-            "date":"09.2021 - 10.2022"
-        },
-        {
-            "company":"MAZAKA YAZILIM",
-            "department":"Back-End Developer",
-            "technologies":".NET 5,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
-            "date":"09.2020 - 09.2021"
-        },
-        {
-            "company":"SA YAZILIM",
-            "department":"Software Developer",
-            "technologies":".NET Framework, JavaScript, JQuery, Windows Forms, T-SQL",
-            "date":"06.2020 - 09.2020"
-        },
-        {
-            "company":"MAYDANOSS MEDYA",
-            "department":"Web Developer",
-            "technologies":"PHP, HTML, CSS, MySQL",
-            "date":"2019 - 06.2020"
-        }
-    ]
+    }
 }

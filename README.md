@@ -13,4 +13,6 @@ _Php is required._
 
 > Regards, Şahin Hürcan
 
+[Şahin Hürcan | Senior Software Engineer (sahinhurcan.com.tr)](https://sahinhurcan.com.tr/)
+
 ![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/2b840437dbb73f23064beef7bf64f4a12cef854b56b0951e.png)

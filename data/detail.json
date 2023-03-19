@@ -1,7 +1,8 @@
 {
     "name":"Şahin Hürcan",
-    "title":"Back-End Developer",
-    "about":"I'am currently working on eCommerce Solutions and Integrations using .NET Core and AngularJS",
+    "title":"Senior Software Engineer",
+    "about":"I'am currently working on Insurance Solutions using .NET 6,Microservices,CQRS,Redis,RabbitMQ,CleanArchitechture,MongoDB,Dapper",
+    "remote":true,
     "personal":{
         "birth":"1998/10/24",
         "place_of_brith":"Gaziantep TR",
@@ -23,25 +24,38 @@
         {
             "school":"Firat University - Faculty of Technology",
             "department":"Software Engineering",
-            "date":"2016 - Current"
+            "date":"2016 - 2022"
         }
     ],
     "skills":{
+        
         "programming":[
+            ".NET 6",
             ".NET Core",
             ".NET Framework",
             "PHP"
         ],
         "javascript":[
             "AngularJS",
+            "ReactJS",
             "jQuery Library",
             "Rest Api"
         ],
-        "sql":[
-            "Entity Framework",
+        "database":[
+            "MongoDB",
             "MSSQL",
             "T-SQL",
             "MySQL"
+        ],
+        "orm":[
+            "Entity Framework Core",
+            "Dapper"
+        ],
+        "testing":[
+            "xUnit",
+            "NUnit",
+            "Moq",
+            "FluentAssertions"
         ],
         "html":[
             "HTML-5",
@@ -57,20 +71,28 @@
             "SoapUI",
             "Jira",
             "SourceTree",
-            "Slack"
-        ],
-        "graphics_programs":[
-            "Adobe Photoshop",
-            "Adobe Illustrator",
-            "Adobe After Effect"
+            "Slack",
+            "Trello"
         ]
     },
     "experience":[
         {
+            "company":"Hepiyi Sigorta",
+            "department":"Senior Software Engineer",
+            "technologies":".NET 6,CQRS,Redis,Microservices,RabbitMQ,CleanArchitechture,MongoDB,Dapper",
+            "date":"10.2022 - Current"
+        },
+        {
+            "company":"MAZAKA YAZILIM",
+            "department":"Back-End Team Lead",
+            "technologies":".NET 6,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
+            "date":"09.2021 - 10.2022"
+        },
+        {
             "company":"MAZAKA YAZILIM",
             "department":"Back-End Developer",
-            "technologies":".NET Core, AngularJS",
-            "date":"09.2020 - Current"
+            "technologies":".NET 5,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
+            "date":"09.2020 - 09.2021"
         },
         {
             "company":"SA YAZILIM",

@@ -1,4 +1,4 @@
-## Json-looking developer resume
+## code editor looking developer resume
 
 Hello,
 

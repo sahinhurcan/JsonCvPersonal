@@ -1,0 +1,88 @@
+{
+    "name":"Şahin Hürcan",
+    "title":"Back-End Developer",
+    "about":"I'am currently working on eCommerce Solutions and Integrations using .NET Core and AngularJS",
+    "personal":{
+        "birth":"1998/10/24",
+        "place_of_brith":"Gaziantep TR",
+        "military_service":false,
+        "single":true,
+        "driving_licence":false
+    },
+    "contact":{
+        "address":"Kayseri TR",
+        "email":[
+            "sahin@sahinhurcan.com.tr",
+            "sahinhurcan@outlook.com"
+        ],
+        "github":"https://github.com/sahinhurcan",
+        "linkedin":"https://linkedin.com/in/sahinhurcan",
+        "web_site":"https://sahinhurcan.com.tr"
+    },
+    "education":[
+        {
+            "school":"Firat University - Faculty of Technology",
+            "department":"Software Engineering",
+            "date":"2016 - Current"
+        }
+    ],
+    "skills":{
+        "programming":[
+            ".NET Core",
+            ".NET Framework",
+            "PHP"
+        ],
+        "javascript":[
+            "AngularJS",
+            "jQuery Library",
+            "Rest Api"
+        ],
+        "sql":[
+            "Entity Framework",
+            "MSSQL",
+            "T-SQL",
+            "MySQL"
+        ],
+        "html":[
+            "HTML-5",
+            "XHTML"
+        ],
+        "version_control":[
+            "git/Github",
+            "git/Bitbucket",
+            "Svn"
+        ],
+        "tools":[
+            "Postman",
+            "SoapUI",
+            "Jira",
+            "SourceTree",
+            "Slack"
+        ],
+        "graphics_programs":[
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Adobe After Effect"
+        ]
+    },
+    "experience":[
+        {
+            "company":"MAZAKA YAZILIM",
+            "department":"Back-End Developer",
+            "technologies":".NET Core, AngularJS",
+            "date":"09.2020 - Current"
+        },
+        {
+            "company":"SA YAZILIM",
+            "department":"Software Developer",
+            "technologies":".NET Framework, JavaScript, JQuery, Windows Forms, T-SQL",
+            "date":"06.2020 - 09.2020"
+        },
+        {
+            "company":"MAYDANOSS MEDYA",
+            "department":"Web Developer",
+            "technologies":"PHP, HTML, CSS, MySQL",
+            "date":"2019 - 06.2020"
+        }
+    ]
+}

@@ -37,10 +37,7 @@ $(function() {
     })
 });
 
-window.onload = function() {
     const url = window.location.origin + "/data/detail.json";
-    
-    
     function convertJsonToHtml(obj, indent) {
         let html = "";
         const keys = Object.keys(obj);
@@ -86,10 +83,10 @@ window.onload = function() {
                     html += `<div class="name">"${key}"</div>\n`;
                 }
                 if (value.startsWith("http")) {
-                    html += `<div class="value"><a href="${value}" target="_blank">${value}</a></div>\n`;
+                    html += `<div class="value">"<a href="${value}" target="_blank">${value}</a>"</div>\n`;
                 } else {
                     if (value.includes("@")) {
-                        html += `<div class="value"><a href="mailto:${value}" target="_blank">${value}</a></div>\n`;
+                        html += `<div class="value">"<a href="mailto:${value}" target="_blank">${value}</a>"</div>\n`;
                     } else {
                     html += `<div class="value">"${value}"</div>\n`;
                     }
@@ -113,4 +110,3 @@ window.onload = function() {
             })
             .catch(error => console.error(error));
     }
-}

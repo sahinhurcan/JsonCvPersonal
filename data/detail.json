@@ -8,21 +8,18 @@
         "place_of_brith":"Gaziantep TR",
         "military_service":false,
         "single":true,
-        "driving_licence":false
+        "driving_licence":true
     },
     "contact":{
         "address":"Kayseri TR",
-        "email":[
-            "sahin@sahinhurcan.com.tr",
-            "sahinhurcan@outlook.com"
-        ],
+        "email":"sahin@sahinhurcan.com.tr",
         "github":"https://github.com/sahinhurcan",
         "linkedin":"https://linkedin.com/in/sahinhurcan",
         "web_site":"https://sahinhurcan.com.tr"
     },
     "experience":[
         {
-            "company":"Hepiyi Sigorta",
+            "company":"Doğan Holding | Hepiyi Sigorta",
             "department":"Senior Software Engineer",
             "technologies":".NET 6,CQRS,Redis,Microservices,RabbitMQ,CleanArchitechture,MongoDB,Dapper",
             "date":"10.2022 - Current"

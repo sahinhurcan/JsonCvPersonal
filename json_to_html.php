@@ -30,7 +30,7 @@ function convertJsonToHtml($obj, $indent) {
                 $html .= '<div class="row t'.$indent.'">'."\n";
             }
             $html .= '<div class="name">"'.$key.'"</div>'."\n";
-            $html .= '<div class="boo">'.$value.'</div>'."\n";
+            $html .= '<div class="boo">'.($value ? 'true' : 'false').'</div>'."\n";
             $html .= '</div>'."\n";
         } else {
             if ($isLast) {

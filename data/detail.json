@@ -6,9 +6,9 @@
     "personal":{
         "birth":"1998/10/24",
         "place_of_brith":"Gaziantep TR",
-        "military_service":false,
+        "military_service":true,
         "single":true,
-        "driving_licence":true
+        "driving_licence":"A,B"
     },
     "contact":{
         "address":"Kayseri TR",
@@ -21,7 +21,7 @@
         {
             "company":"Doğan Holding | Hepiyi Sigorta",
             "department":"Senior Software Engineer",
-            "technologies":".NET 6,CQRS,Redis,Microservices,RabbitMQ,CleanArchitechture,MongoDB,Dapper",
+            "technologies":".NET 6,CQRS,Redis,Microservices,RabbitMQ,CleanArchitechture,MongoDB,Dapper,EventBus,Quartz,Hangfire",
             "date":"10.2022 - Current"
         },
         {

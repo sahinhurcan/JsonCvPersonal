@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include "_header.php" ?>
+<link rel="manifest" href="manifest.json">
 <body id="desktop">
     <main class="editor theme-dark">
       <div class="editor-header">
@@ -33,6 +34,17 @@
         </div>
       </div>
     </main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+    </script>
 </body>
 <?php include "_footer.html" ?>
 </html>

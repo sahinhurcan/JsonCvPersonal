@@ -1,107 +1,74 @@
 {
-    "name":"Şahin Hürcan",
-    "title":"Senior Software Engineer",
-    "about":"I'am currently working on Insurance Solutions using .NET 6,Microservices,CQRS,Redis,RabbitMQ,CleanArchitechture,MongoDB,Dapper",
-    "remote":true,
-    "personal":{
-        "birth":"1998/10/24",
-        "place_of_brith":"Gaziantep TR",
-        "military_service":true,
-        "single":true,
-        "driving_licence":"A,B"
+  "name": "Şahin Hürcan",
+  "title": "Senior Software Engineer",
+  "about": "Senior Software Engineer with over 6 years of experience across the .NET ecosystem, delivering scalable, high-performance and maintainable software. I convert complex business problems—especially those involving regulatory compliance, high transaction volumes and integration challenges—into robust, production-ready solutions. My work focuses on distributed systems, microservices architectures, message-driven & asynchronous processing, and database optimization. I follow CI/CD, Clean Architecture and rigorous code quality practices, and I continuously adopt new technologies to add measurable value to projects.",
+  "remote": true,
+  "personal": {
+    "birth": 1998,
+    "place_of_birth": "Gaziantep, TR",
+    "military_service": true,
+    "driving_licence": "A,B"
+  },
+  "contact": {
+    "address": "Bursa, TR",
+    "email": "sahin@sahinhurcan.com.tr",
+    "github": "https://github.com/sahinhurcan",
+    "linkedin": "https://linkedin.com/in/sahinhurcan",
+    "web_site": "https://sahinhurcan.com.tr"
+  },
+  "experience": [
+    {
+      "company": "Hepiyi Sigorta (Doğan Holding)",
+      "position": "Senior Software Engineer",
+      "technologies": [".NET 6", ".NET 7", ".NET 8", ".NET 9", ".NET 10", "CQRS", "Redis", "Microservices", "RabbitMQ", "Clean Architecture", "MongoDB", "Dapper", "Event Bus", "Quartz", "Hangfire"],
+      "period": "10.2022 - Present",
+      "description": "Contributed as a core development team member to build a modular, extensible insurance platform from the ground up. Implemented CQRS and message-based asynchronous patterns to handle high-throughput scenarios and ensure data consistency. Integrated Redis and MongoDB for performance-focused data access and implemented event-driven components to improve system scalability."
     },
-    "contact":{
-        "address":"Kayseri TR",
-        "email":"sahin@sahinhurcan.com.tr",
-        "github":"https://github.com/sahinhurcan",
-        "linkedin":"https://linkedin.com/in/sahinhurcan",
-        "web_site":"https://sahinhurcan.com.tr"
+    {
+      "company": "Mazaka Yazılım",
+      "position": "Back-End Team Lead",
+      "technologies": [".NET 6", "AngularJS", "ReactJS", "EF Core", "SQL Server"],
+      "period": "09.2021 - 10.2022",
+      "description": "Provided technical leadership and drove infrastructure modernization for an e-commerce platform. Addressed concurrency and transactional integrity challenges during high-traffic campaigns, introduced locking and optimistic strategies, and led a platform upgrade to .NET 6. Defined API standards and versioning to improve integration speed and reliability."
     },
-    "experience":[
-        {
-            "company":"Doğan Holding | Hepiyi Sigorta",
-            "department":"Senior Software Engineer",
-            "technologies":".NET 6,CQRS,Redis,Microservices,RabbitMQ,CleanArchitechture,MongoDB,Dapper,EventBus,Quartz,Hangfire",
-            "date":"10.2022 - Current"
-        },
-        {
-            "company":"MAZAKA YAZILIM",
-            "department":"Back-End Team Lead",
-            "technologies":".NET 6,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
-            "date":"09.2021 - 10.2022"
-        },
-        {
-            "company":"MAZAKA YAZILIM",
-            "department":"Back-End Developer",
-            "technologies":".NET 5,.NET Core, AngularJS,ReacJs,EF Core,Sql Server",
-            "date":"09.2020 - 09.2021"
-        },
-        {
-            "company":"SA YAZILIM",
-            "department":"Software Developer",
-            "technologies":".NET Framework, JavaScript, JQuery, Windows Forms, T-SQL",
-            "date":"06.2020 - 09.2020"
-        },
-        {
-            "company":"MAYDANOSS MEDYA",
-            "department":"Web Developer",
-            "technologies":"PHP, HTML, CSS, MySQL",
-            "date":"2019 - 06.2020"
-        }
-    ],
-    "education":[
-        {
-            "school":"Firat University - Faculty of Technology",
-            "department":"Software Engineering",
-            "date":"2016 - 2022"
-        }
-    ],
-    "skills":{
-        
-        "programming":[
-            ".NET 6",
-            ".NET Core",
-            ".NET Framework",
-            "PHP"
-        ],
-        "javascript":[
-            "AngularJS",
-            "ReactJS",
-            "jQuery Library",
-            "Rest Api"
-        ],
-        "database":[
-            "MongoDB",
-            "MSSQL",
-            "T-SQL",
-            "MySQL"
-        ],
-        "orm":[
-            "Entity Framework Core",
-            "Dapper"
-        ],
-        "testing":[
-            "xUnit",
-            "NUnit",
-            "Moq",
-            "FluentAssertions"
-        ],
-        "html":[
-            "HTML-5",
-            "XHTML"
-        ],
-        "version_control":[
-            "git/Github",
-            "git/Bitbucket",
-            "Svn"
-        ],
-        "tools":[
-            "Postman",
-            "SoapUI",
-            "Jira",
-            "SourceTree",
-            "Slack",
-            "Trello"
-        ]
+    {
+      "company": "Mazaka Yazılım",
+      "position": "Back-End Developer",
+      "technologies": [".NET 5", ".NET Core", "AngularJS", "ReactJS", "EF Core", "SQL Server"],
+      "period": "09.2020 - 09.2021",
+      "description": "Worked on e-commerce package development, implementing payment gateway integrations, e-invoicing and ERP connectors. Automated recurring and bulk tasks using Quartz.NET and Hangfire to improve operational efficiency."
+    },
+    {
+      "company": "SA Yazılım",
+      "position": ".NET Developer",
+      "technologies": [".NET Framework", "JavaScript", "jQuery", "Windows Forms", "T-SQL"],
+      "period": "06.2020 - 09.2020",
+      "description": "Developed sector-specific applications that digitized manual business workflows, improving reliability and throughput. Focused on integration and data integrity with SQL Server-based solutions."
+    },
+    {
+      "company": "Maydanoss Medya",
+      "position": "Web Developer",
+      "technologies": ["PHP", "HTML", "CSS", "MySQL"],
+      "period": "2019 - 06.2020",
+      "description": "Delivered front-end and back-end solutions for web projects, including admin panels and content sites."
     }
+  ],
+  "education": [
+    {
+      "school": "Fırat University - Faculty of Technology",
+      "department": "Software Engineering",
+      "date": "2016 - 2022",
+      "description": "Project-based education with extensive lab work, delivering hands-on experience in large-scale software analysis, design and testing."
+    }
+  ],
+  "skills": {
+    "programming": ["C#", ".NET (5, 6, 7, 8, 9, 10)", "PHP", "JavaScript"],
+    "databases": ["SQL Server", "MongoDB", "Redis", "MySQL"],
+    "architecture": ["CQRS", "Clean Architecture", "Microservices", "Event-Driven Architecture"],
+    "messaging": ["RabbitMQ", "Kafka (concept)"],
+    "orm": ["Entity Framework", "Dapper"],
+    "testing": ["xUnit", "NUnit", "Moq", "FluentAssertions"],
+    "frontend": ["ReactJS", "AngularJS", "jQuery", "Vanilla JS", "CSS (LESS, SASS)"],
+    "tools": ["Git", "Azure DevOps", "GitHub Actions", "JIRA", "Postman", "Swagger"]
+  }
 }

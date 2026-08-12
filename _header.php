@@ -10,7 +10,32 @@
     <meta name="theme-color" content="#333333">
     <meta name="msapplication-navbutton-color" content="#333333">
     <meta name="apple-mobile-web-app-status-bar-style" content="#333333">
-    <!--CSS IMPORT-->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN (quick, no build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      /* Tailwind base configuration for this project */
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0ea5e9',
+              accent: '#7c3aed'
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui']
+            }
+          }
+        }
+      }
+    </script>
+
+    <!--CSS IMPORT (legacy styles kept for now) -->
     <link rel="stylesheet" href="/css/style.css">
 
     <!--SEO META-->

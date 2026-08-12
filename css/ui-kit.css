@@ -1,0 +1,36 @@
+/* UI Kit — small Tailwind component classes for consistent usage across the app
+   These are utility classes that complement Tailwind. Prefer using Tailwind utilities first.
+*/
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium;
+}
+.btn-primary {
+  @apply bg-primary text-white hover:brightness-95;
+}
+.btn-secondary {
+  @apply bg-gray-100 text-gray-800 hover:bg-gray-200;
+}
+.btn-ghost {
+  @apply bg-transparent text-primary hover:underline;
+}
+
+/* Card */
+.card {
+  @apply bg-white rounded-lg shadow p-4;
+}
+
+/* Badge */
+.badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-gray-200 text-gray-800;
+}
+
+/* Typography helpers */
+.h1 { @apply text-3xl font-bold; }
+.h2 { @apply text-2xl font-semibold; }
+.h3 { @apply text-xl font-medium; }
+
+/* Utilities */
+.kv-key { @apply font-medium text-sm text-gray-600; }
+.kv-value { @apply text-sm text-gray-800; }

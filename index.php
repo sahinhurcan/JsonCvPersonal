@@ -2,31 +2,62 @@
 <html lang="en">
 <?php include "_header.php" ?>
 <body id="app" class="min-h-screen bg-gray-50 text-gray-900">
+  <?php $data = json_decode(file_get_contents("data/detail.json"), true); ?>
+  <?php $contact = $data['contact'] ?? []; ?>
+  <?php $skills = isset($data['skills']) ? $data['skills'] : []; ?>
+
   <div class="min-h-screen flex items-center justify-center p-6">
-    <div class="w-full max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
-      <aside class="w-full md:w-64 bg-gray-100 p-6 border-r">
-        <div class="flex items-center space-x-3 mb-6">
-          <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold"><?php echo strtoupper(substr($name,0,1)); ?></div>
+    <div class="w-full max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-4">
+
+      <!-- LEFT: Profile / Navigation -->
+      <aside class="col-span-1 bg-gray-100 p-6 space-y-6">
+        <div class="flex items-center space-x-3">
+          <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold"><?php echo strtoupper(substr($data['name'] ?? '',0,1)); ?></div>
           <div>
-            <h1 class="text-lg font-semibold"><?php echo $name ?></h1>
-            <p class="text-sm text-gray-500"><?php echo $title ?></p>
+            <h1 class="text-lg font-semibold"><?php echo htmlspecialchars($data['name'] ?? ''); ?></h1>
+            <p class="text-sm text-gray-600"><?php echo htmlspecialchars($data['title'] ?? ''); ?></p>
           </div>
         </div>
 
-        <div class="mb-6">
-          <h2 class="text-xs font-semibold text-gray-600 uppercase mb-2">Files</h2>
-          <ul id="fileList" class="space-y-2">
-            <li><button data-file="detail" class="file-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200 bg-white shadow-sm">detail.json</button></li>
-            <li><button data-file="avatar" class="file-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200">avatar.jpg</button></li>
-          </ul>
+        <div class="space-y-1">
+          <?php if(!empty($contact['email'])): ?>
+            <a href="mailto:<?php echo htmlspecialchars($contact['email']); ?>" class="block text-sm text-primary hover:underline"><?php echo htmlspecialchars($contact['email']); ?></a>
+          <?php endif; ?>
+          <?php if(!empty($contact['web_site'])): ?>
+            <a href="<?php echo htmlspecialchars($contact['web_site']); ?>" target="_blank" rel="noopener noreferrer" class="block text-sm text-primary hover:underline"><?php echo htmlspecialchars($contact['web_site']); ?></a>
+          <?php endif; ?>
+          <?php if(!empty($contact['linkedin'])): ?>
+            <a href="<?php echo htmlspecialchars($contact['linkedin']); ?>" target="_blank" rel="noopener noreferrer" class="block text-sm hover:underline">LinkedIn</a>
+          <?php endif; ?>
+          <?php if(!empty($contact['github'])): ?>
+            <a href="<?php echo htmlspecialchars($contact['github']); ?>" target="_blank" rel="noopener noreferrer" class="block text-sm hover:underline">GitHub</a>
+          <?php endif; ?>
+        </div>
+
+        <div>
+          <h2 class="text-xs font-semibold text-gray-600 uppercase mb-2">Top Skills</h2>
+          <div class="flex flex-wrap gap-2">
+            <?php
+              $flat = [];
+              if(is_array($skills)){
+                foreach($skills as $group) if(is_array($group)) foreach($group as $s) $flat[] = $s;
+              }
+              $flat = array_slice($flat,0,8);
+              foreach($flat as $s){
+                echo '<span class="px-2 py-1 bg-white rounded-full text-xs shadow-sm">'.htmlspecialchars($s).'</span>';
+              }
+            ?>
+          </div>
         </div>
 
         <div class="mt-auto">
-          <button id="themeToggle" class="w-full px-3 py-2 bg-primary text-white rounded">Toggle Theme</button>
+          <button id="themeToggle" class="w-full btn-primary" aria-pressed="false">Toggle theme</button>
+          <a href="#rawjson" class="block mt-3 text-center text-sm text-gray-600 hover:underline">View raw JSON</a>
         </div>
       </aside>
 
-      <main class="flex-1 p-6 bg-white" id="viewer">
+      <!-- RIGHT: Content viewer -->
+      <main class="col-span-3 p-8" id="viewer">
         <div id="contentArea" class="prose max-w-none font-sans">
           <div class="text-gray-500">Loading...</div>
         </div>

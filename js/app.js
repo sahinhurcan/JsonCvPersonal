@@ -7,9 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isDark) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
+      themeToggle.setAttribute('aria-pressed', 'true');
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
+      themeToggle.setAttribute('aria-pressed', 'false');
     }
   }
 
@@ -20,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
   themeToggle.addEventListener('click', () => {
     const isDark = document.documentElement.classList.toggle('dark');
     setTheme(isDark);
+  });
+
+  // Keyboard accessibility for theme toggle
+  themeToggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      themeToggle.click();
+    }
   });
 
   async function loadDetail() {
@@ -48,18 +58,25 @@ document.addEventListener('DOMContentLoaded', function () {
       </header>
     `;
 
-    // Skills
-    if (Array.isArray(data.skills) && data.skills.length) {
+    // Skills — flatten multiple skill groups if present
+    const skills = [];
+    if (data.skills) {
+      Object.keys(data.skills).forEach(k => {
+        if (Array.isArray(data.skills[k])) data.skills[k].forEach(s => skills.push(s));
+      });
+    }
+
+    if (skills.length) {
       html += `<section class="mb-6">
         <h2 class="text-xl font-semibold mb-2">Skills</h2>
         <div class="flex flex-wrap gap-2">`;
-      data.skills.forEach(s => {
+      skills.forEach(s => {
         html += `<span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm">${escapeHtml(s)}</span>`;
       });
       html += `</div></section>`;
     }
 
-    // Work / experience
+    // Experience
     if (Array.isArray(data.experience) && data.experience.length) {
       html += `<section class="mb-6">
         <h2 class="text-xl font-semibold mb-2">Experience</h2>
@@ -71,12 +88,26 @@ document.addEventListener('DOMContentLoaded', function () {
               <div class="font-semibold">${escapeHtml(item.position || item.role || item.title || '')}</div>
               <div class="text-sm text-gray-500 dark:text-gray-300">${escapeHtml(item.company || '')}</div>
             </div>
-            <div class="text-sm text-gray-400">${escapeHtml(item.period || '')}</div>
+            <div class="text-sm text-gray-400">${escapeHtml(item.period || item.date || '')}</div>
           </div>
           ${item.description ? `<p class="mt-2 text-sm text-gray-700 dark:text-gray-200">${escapeHtml(item.description)}</p>` : ''}
         </div>`;
       });
       html += `</div></section>`;
+    }
+
+    // Contact
+    if (data.contact) {
+      html += `<section class="mb-6">
+        <h2 class="text-xl font-semibold mb-2">Contact</h2>
+        <ul class="text-sm text-gray-700 dark:text-gray-200 space-y-1">
+          ${data.contact.address ? `<li><strong>Location:</strong> ${escapeHtml(data.contact.address)}</li>` : ''}
+          ${data.contact.email ? `<li><strong>Email:</strong> <a class="text-primary hover:underline" href="mailto:${escapeHtml(data.contact.email)}">${escapeHtml(data.contact.email)}</a></li>` : ''}
+          ${data.contact.github ? `<li><strong>GitHub:</strong> <a class="text-primary hover:underline" href="${escapeHtml(data.contact.github)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.contact.github)}</a></li>` : ''}
+          ${data.contact.linkedin ? `<li><strong>LinkedIn:</strong> <a class="text-primary hover:underline" href="${escapeHtml(data.contact.linkedin)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.contact.linkedin)}</a></li>` : ''}
+          ${data.contact.web_site ? `<li><strong>Website:</strong> <a class="text-primary hover:underline" href="${escapeHtml(data.contact.web_site)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.contact.web_site)}</a></li>` : ''}
+        </ul>
+      </section>`;
     }
 
     // Fallback: pretty JSON at the end
@@ -91,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function escapeHtml(str) {
     if (typeof str !== 'string') return str;
-    return str.replace(/[&<>"'`]/g, function (char) {
+    return str.replace(/[&<>\"'`]/g, function (char) {
       return ({
         '&': '&amp;',
         '<': '&lt;',
@@ -105,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   async function loadAvatar() {
     // Try to display images/avatar.jpg or use _avatar.php
-    // First check if /images/avatar.jpg exists by attempting to fetch its HEAD
     try {
       const imgUrl = '/images/avatar.jpg';
       const r = await fetch(imgUrl, { method: 'HEAD' });
@@ -122,18 +152,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Wire up file buttons
   fileButtons.forEach(btn => {
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('tabindex', '0');
+    btn.setAttribute('aria-pressed', 'false');
+
     btn.addEventListener('click', async (e) => {
       const file = btn.getAttribute('data-file');
-      document.querySelectorAll('.file-btn').forEach(b => b.classList.remove('bg-white','shadow-sm'));
+      document.querySelectorAll('.file-btn').forEach(b => {
+        b.classList.remove('bg-white','shadow-sm');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('bg-white','shadow-sm');
+      btn.setAttribute('aria-pressed', 'true');
       if (file === 'detail') {
         await loadDetail();
       } else if (file === 'avatar') {
         await loadAvatar();
       }
     });
+
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
   });
 
   // Load default
-  document.querySelector('.file-btn[data-file="detail"]').click();
+  const defaultBtn = document.querySelector('.file-btn[data-file="detail"]');
+  if (defaultBtn) defaultBtn.click();
 });

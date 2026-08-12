@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Tailwind CDN (quick, no build) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,15 +29,17 @@
               accent: '#7c3aed'
             },
             fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui']
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
             }
           }
         }
       }
     </script>
 
-    <!--CSS IMPORT (legacy styles kept for now) -->
+    <!-- Legacy CSS kept for compatibility; ui.css contains small overrides -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/ui.css">
 
     <!--SEO META-->
     <meta name="author" content="<?php echo $name ?>">

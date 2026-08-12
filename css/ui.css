@@ -1,0 +1,40 @@
+/* ui.css — small additions and component fallbacks to complement Tailwind utilities */
+
+:root{
+  --primary: #0ea5e9;
+  --accent: #7c3aed;
+}
+
+/* Make pre/code use JetBrains Mono for better readability */
+pre, code, kbd, samp {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+}
+
+/* Small button fallback for elements that rely on .btn-primary class */
+.btn-primary{
+  background-color: var(--primary);
+  color: white;
+  padding: .5rem .75rem;
+  border-radius: .375rem;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Card fallback */
+.card{
+  background: white;
+  border-radius: .5rem;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+  padding: 1rem;
+}
+
+/* Improve default focus outline for accessibility */
+:focus{
+  outline: 3px solid rgba(14,165,233,0.25);
+  outline-offset: 2px;
+}
+
+/* Responsive tweaks for our layout if legacy CSS still applies */
+@media (max-width: 768px){
+  .editor { width: 100% !important; }
+}

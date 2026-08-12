@@ -21,6 +21,7 @@
     <script>
       /* Tailwind base configuration for this project */
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {

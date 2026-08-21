@@ -1,7 +1,7 @@
 {
   "name": "Şahin Hürcan",
   "title": "Senior Software Engineer",
-  "about": "Senior Software Engineer with over 6 years of experience across the .NET ecosystem, delivering scalable, high-performance and maintainable software. I convert complex business problems—especially those involving regulatory compliance, high transaction volumes and integration challenges—into robust, production-ready solutions. My work focuses on distributed systems, microservices architectures, message-driven & asynchronous processing, and database optimization. I follow CI/CD, Clean Architecture and rigorous code quality practices, and I continuously adopt new technologies to add measurable value to projects.",
+  "about": "Senior Software Engineer with over 6 years of experience across the .NET ecosystem, delivering scalable, high-performance, and maintainable software. I convert complex business problems—especially those involving regulatory compliance, high transaction volumes, and integration challenges—into robust, production-ready solutions. My work integrates CI/CD pipelines, Disaster Recovery (DRC) management, and AI-assisted development (Context Engineering) to ensure operational excellence. I have strong experience in leading development teams, mentoring junior developers, and applying proactive AppSec measures across hundreds of projects.",
   "remote": true,
   "personal": {
     "birth": 1998,
@@ -20,30 +20,30 @@
     {
       "company": "Hepiyi Sigorta (Doğan Holding)",
       "position": "Senior Software Engineer",
-      "technologies": [".NET 6", ".NET 7", ".NET 8", ".NET 9", ".NET 10", "CQRS", "Redis", "Microservices", "RabbitMQ", "Clean Architecture", "MongoDB", "Dapper", "Event Bus", "Quartz", "Hangfire"],
+      "technologies": [".NET 6", ".NET 7", ".NET 8", ".NET 9", ".NET 10", "CQRS", "Redis", "Microservices", "RabbitMQ", "Clean Architecture", "MongoDB", "Dapper", "Azure DevOps", "GitHub Actions"],
       "period": "10.2022 - Present",
-      "description": "Contributed as a core development team member to build a modular, extensible insurance platform from the ground up. Implemented CQRS and message-based asynchronous patterns to handle high-throughput scenarios and ensure data consistency. Integrated Redis and MongoDB for performance-focused data access and implemented event-driven components to improve system scalability."
+      "description": "Contributed as a core development team member to build a modular, extensible insurance platform from the ground up, adapting rapidly to changing regulations. Implemented CQRS and RabbitMQ for message-based asynchronous processing to handle high-throughput scenarios and ensure data consistency. Orchestrated CI/CD pipelines and Disaster Recovery (DRC) strategies, while integrating AI tools via Context Engineering to optimize development workflows. Applied proactive AppSec (OWASP) measures across operations."
     },
     {
       "company": "Mazaka Yazılım",
       "position": "Back-End Team Lead",
-      "technologies": [".NET 6", "AngularJS", "ReactJS", "EF Core", "SQL Server"],
+      "technologies": [".NET 6", "ReactJS", "AngularJS", "EF Core", "SQL Server", "Redis Lock"],
       "period": "09.2021 - 10.2022",
-      "description": "Provided technical leadership and drove infrastructure modernization for an e-commerce platform. Addressed concurrency and transactional integrity challenges during high-traffic campaigns, introduced locking and optimistic strategies, and led a platform upgrade to .NET 6. Defined API standards and versioning to improve integration speed and reliability."
+      "description": "Provided technical leadership for a 22-person development team and drove infrastructure modernization for an e-commerce platform. Addressed concurrency and transactional integrity challenges during high-traffic campaigns using optimistic and pessimistic locking mechanisms. Defined API standards and versioning to improve integration speed and reliability, and successfully managed cross-functional coordination between frontend and backend teams."
     },
     {
       "company": "Mazaka Yazılım",
       "position": "Back-End Developer",
-      "technologies": [".NET 5", ".NET Core", "AngularJS", "ReactJS", "EF Core", "SQL Server"],
+      "technologies": [".NET 5", ".NET Core", "ReactJS", "AngularJS", "EF Core", "SQL Server", "Quartz.NET", "Hangfire"],
       "period": "09.2020 - 09.2021",
-      "description": "Worked on e-commerce package development, implementing payment gateway integrations, e-invoicing and ERP connectors. Automated recurring and bulk tasks using Quartz.NET and Hangfire to improve operational efficiency."
+      "description": "Worked on e-commerce package development, implementing critical payment gateway integrations, e-invoicing, and ERP connectors. Automated high-volume recurring tasks and campaign operations using Quartz.NET and Hangfire to improve operational efficiency. Optimized database performance using SQL Server Indexes and FullTextSearch."
     },
     {
       "company": "SA Yazılım",
       "position": ".NET Developer",
-      "technologies": [".NET Framework", "JavaScript", "jQuery", "Windows Forms", "T-SQL"],
+      "technologies": [".NET Framework", "JavaScript", "jQuery", "Windows Forms", "T-SQL", "SOAP", "REST"],
       "period": "06.2020 - 09.2020",
-      "description": "Developed sector-specific applications that digitized manual business workflows, improving reliability and throughput. Focused on integration and data integrity with SQL Server-based solutions."
+      "description": "Developed sector-specific digital transformation solutions for accounting, franchising, and logistics workflows, improving reliability and throughput. Built robust data integration pipelines using REST, SOAP, XML, and JSON, ensuring database integrity with SQL Server triggers and procedures."
     },
     {
       "company": "Maydanoss Medya",
@@ -58,17 +58,17 @@
       "school": "Fırat University - Faculty of Technology",
       "department": "Software Engineering",
       "date": "2016 - 2022",
-      "description": "Project-based education with extensive lab work, delivering hands-on experience in large-scale software analysis, design and testing."
+      "description": "Project-based education with extensive lab work, delivering hands-on experience in large-scale software analysis, architectural design, and testing."
     }
   ],
   "skills": {
     "programming": ["C#", ".NET (5, 6, 7, 8, 9, 10)", "PHP", "JavaScript"],
     "databases": ["SQL Server", "MongoDB", "Redis", "MySQL"],
-    "architecture": ["CQRS", "Clean Architecture", "Microservices", "Event-Driven Architecture"],
-    "messaging": ["RabbitMQ", "Kafka (concept)"],
+    "architecture": ["CQRS", "Clean Architecture", "SOA", "Microservices", "Event-Driven Architecture"],
+    "messaging_and_jobs": ["RabbitMQ", "Kafka (concept)", "Quartz.NET", "Hangfire"],
     "orm": ["Entity Framework", "Dapper"],
-    "testing": ["xUnit", "NUnit", "Moq", "FluentAssertions"],
-    "frontend": ["ReactJS", "AngularJS", "jQuery", "Vanilla JS", "CSS (LESS, SASS)"],
-    "tools": ["Git", "Azure DevOps", "GitHub Actions", "JIRA", "Postman", "Swagger"]
+    "testing": ["xUnit", "TDD", "Integration Testing", "Moq", "FluentAssertions"],
+    "frontend": ["ReactJS", "AngularJS", "jQuery", "Vanilla JS", "CSS (LESS, SASS, Bootstrap)"],
+    "tools_and_practices": ["Git", "Azure DevOps", "GitHub Actions", "JIRA", "Postman", "Swagger", "GitHub Copilot", "Cursor", "AppSec"]
   }
 }
